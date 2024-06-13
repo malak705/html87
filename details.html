@@ -1,0 +1,87 @@
+<!-- details.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QNB Details</title>
+              <link rel="stylesheet" href="style.css">
+
+              <script type = "text/javascript" src="myFunctions.js"></script>  
+
+  </head>
+  <body>
+    <center>
+      <h1>تفاصيل العقار</h1>
+    <img  alt="Car" id="carid" height="400px" width="400px" >
+    <table >
+ 
+  <tr>
+     <td>    <p>الايجار </p>
+</td>
+    <td><span id="carprice"></span></td>
+    
+  </tr>
+
+  <tr>
+      <td>الملكية</td>
+    <td><span id="carprice5"></span></td>
+  
+  </tr>
+  <tr>
+      <td>المساحة</td>
+    <td><span id="carprice1"></span></td>
+      
+
+  </tr>
+    <tr>
+        <td>مكان العقار</td>
+    <td>    <p><span id="carname"></span></p>
+</td>
+  
+
+  </tr>
+    <tr>
+    <td>   <input type="checkbox" id="showForm" onchange="toggleForm()"/>متابعة
+
+</td>
+    <td><button onclick="goBack()">الغاء</button>
+  </td>
+
+  </tr>
+  
+
+</table>
+
+<form onsubmit="return false;"  method="post" name="myForm"id="myForm" style="display:none;">
+  <div class="container">
+    <label for="name"><b> Full name</b></label>
+<input type="text" placeholder="Full name" id="myUsername" name="username" pattern=".*" required><br>
+    <label for="student"><b>email</b></label>
+   <input type="text" placeholder="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
+    <label for="student"><b>ID number</b></label>
+<input type="text" placeholder="id number" id="number_s" name="number_s" pattern="^(0[1-9]|1[0-5])[0-9]{9}$"required><br>
+        <label for="date"><b>Birth Date</b>
+        <br></label>
+    <input type="text" placeholder="DD/MM/YYYY"id="date1", name="date1" pattern="((0[1-9]|1\d|2\d|3[01])\0[1-9]|1[0-2])\/(19|20)\d{2}" required><br>
+    
+     <label for="pro" id="typerant"><b>Days Number</b></label>
+<input type="number" placeholder="days number" step="1" id="spaner" />
+     <br> <label for="phone"><b>phone number</b></label>
+     
+  <input type="text" placeholder="009639111111111" id="phonenumber" name="phonenumber" pattern="((0)(93|94|95|96|98|99)([0-9]{7}))|((0)(92|95|96|97)([0-9]{7}))" required>
+      <label for="verification"><b> please enter the captcha code </b></label>
+     
+        <input type="text" id="txtCaptcha" style="text-align: center; border: none; font-weight: bold; font-size: 20px; font-family: Modern"  />  
+        <input type="text" id="txtCompare" required/> 
+        <input type="button" id="btnrefresh" value="تحديث" onclick="Captcha();" />  
+   
+
+
+
+    <button   name="submit" onclick="validateForm()">تقديم الطلب</button>
+
+
+</form>
+   
+    </center>
+  </body>
+</html>
